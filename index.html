@@ -1,0 +1,458 @@
+<html dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>الصفحه الرئيسية للطالب</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <style>
+            /* التنسيق الأساسي للصفحة */
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                /* 💡 تم التعديل: لون جسم الصفحة الجديد */
+                background-color: #ebebeb;
+                direction: rtl;
+                text-align: right;
+            }
+
+            /* تنسيق رأس القائمة (الـ Navbar) */
+            .navbar {
+                /* 💡 تم التعديل: لون الهيدر الجديد */
+                background: #f17720; 
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s;
+            }
+
+            .navbar-brand {
+                display: flex;
+                align-items: center;
+                /* 💡 تم التعديل: لون اسم المعهد ليكون أبيض */
+                color: white;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            
+            /* 💡 تم الإضافة: ضمان أن جميع نصوص الـ navbar-brand بيضاء */
+            .navbar-brand div {
+                color: white; 
+            }
+
+            .navbar-brand img.logo {
+                height: 50px;
+                width: 50px;
+                margin-left: 15px;
+                border-radius: 50%;
+                border: 2px solid white;
+            }
+
+            .navbar-brand .header-text {
+                text-align: right;
+            }
+
+            .navbar-brand .big-title {
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-bottom: 0;
+            }
+
+            .navbar-brand div {
+                font-size: 0.8rem;
+                line-height: 1.2;
+            }
+
+            /* تنسيق أزرار القائمة */
+            .nav-item {
+                margin: 0 8px;
+            }
+
+            .nav-link {
+                color: white !important;
+                background-color: transparent; 
+                border-radius: 5px;
+                padding: 10px 15px !important; 
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                transition: background-color 0.3s ease;
+            }
+
+            .nav-link i {
+                font-size: 1.2rem;
+                margin-left: 8px;
+                /* 💡 لون الأيقونات الافتراضي (الأزرق) */
+                color: #0474ba;
+            }
+
+            .nav-link:hover {
+                /* 💡 لون الـ hover الجديد */
+                background-color: #ffa630;
+                transform: none; 
+            }
+            .nav-link.active {
+                background-color: #ffa630;
+            }
+
+            /* تنسيق الـ Toggle button للأجهزة الصغيرة */
+            .navbar-toggler {
+                border-color: rgba(255, 255, 255, 0.5);
+            }
+
+            .navbar-toggler-icon {
+                filter: invert(1);
+            }
+            
+            /* تنسيق الأزرار الأساسية (Icons/Buttons) لجميع الصفحات */
+            .btn-primary, .btn-success {
+                background-color: #0474ba !important; /* الأزرق الأساسي */
+                border-color: #0474ba !important;
+                transition: background-color 0.3s, border-color 0.3s;
+            }
+            .btn-primary:hover, .btn-success:hover {
+                background-color: #00a7e1 !important; /* الأزرق الـ hover */
+                border-color: #00a7e1 !important;
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="header" class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <div class="header-text">
+                        <div>وزارة التعليم العالي</div>
+                        <div class="big-title">المعهد العالي للدراسات النوعية</div>
+                        <div>نزلة البطران - الجيزة</div>
+                    </div>
+                    <img src="logo.png" class="logo" alt="Logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a href="personal.php" class="nav-link"><i class="bx bx-user"></i> <span>البيانات الشخصية للطالب</span></a></li>
+                                                                                                                            <li class="nav-item"><a href="natega_2024.php" class="nav-link"><i class="bx bx-file-blank"></i> <span>نتيجة عام 2024</span></a></li>
+                                                                            <li class="nav-item"><a href="natega_2025.php" class="nav-link"><i class="bx bx-file-blank"></i> <span>نتيجة عام 2025</span></a></li>
+                                                                                                    <li class="nav-item"><a href="results.php" class="nav-link"><i class="bx bx-file-blank"></i> <span>نتيجة اعمال السنة</span></a></li>
+                                                
+                                                     <li class="nav-item"><a href="qayd_request.php" class="nav-link"><i class="bx bx-file-blank"></i> <span>استخراج اثبات قيد</span></a></li>
+                                                
+                        
+                        
+                                                                                                                            <li class="nav-item"><a href="subject_final_exam.php" class="nav-link"><i class="bx bx-file-blank"></i> <span>جداول الامتحانات الترم </span></a></li>
+                                                                                                                            <li class="nav-item"><a href="student_tasks_co.php" class="nav-link"><i class="bx bx-book-content"></i> <span>المهام والاختبارات</span></a></li>
+                                                                                                                                                                        
+                        
+                                                                         
+                                                                                                                            <li class="nav-item"><a href="subject_student_co_view.php" class="nav-link"><i class="bx bx-server"></i> <span>الكتب الدراسية للساعات المعتمدة</span></a></li>
+                                                                                                                                                                        <li class="nav-item"><a href="logout.php" class="nav-link"><i class="bx bx-log-out"></i> <span>خروج</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+  </body>
+
+  </html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البيانات الشخصية للطالب</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            direction: rtl;
+            text-align: right;
+            margin: 0;
+        }
+
+        .container-main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px 15px;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .profile-img-container {
+            width: 180px;
+            height: 180px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eee;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .profile-title {
+            color: #0474ba; /* اللون الأساسي الجديد (أزرق داكن) */
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .info-item i {
+            color: #0474ba; /* لون الأيقونات (أزرق داكن) */
+            font-size: 1.4rem;
+            margin-left: 10px;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #333;
+            margin-left: 5px;
+        }
+        
+        /* تنسيق قسم التوعية بالقواعد السلوكية */
+        .netiquette-card {
+            background-color: #e6f7ff; /* لون خلفية فاتح جذاب */
+            border: 2px solid #0474ba;
+            color: #0474ba;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: right;
+            box-shadow: 0 4px 15px rgba(4, 116, 186, 0.2);
+        }
+
+        .netiquette-card .netiquette-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #0474ba;
+            border-bottom: 2px solid #0474ba;
+            padding-bottom: 10px;
+        }
+
+        .netiquette-card ul {
+            list-style: none;
+            padding-right: 0;
+            margin-bottom: 0;
+        }
+        
+        .netiquette-card ul li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 8px;
+            color: #333;
+            position: relative;
+            padding-right: 25px;
+        }
+        
+        .netiquette-card ul li i {
+            position: absolute;
+            right: 0;
+            top: 5px;
+            color: #28a745; /* لون أيقونة التأكيد (أخضر) */
+            font-size: 1.2rem;
+        }
+
+        /* تنسيق قسم التنبيهات */
+        .notice-card {
+            background-color: #fff3cd;
+            border-color: #ffc107;
+            color: #664d03;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: right;
+        }
+
+        .notice-card .notice-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #664d03;
+        }
+
+        .notice-card .notice-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #664d03;
+        }
+
+        /* تنسيق زر تغيير الصورة */
+        .btn-upload {
+            background-color: #0474ba;
+            color: white;
+            border-radius: 8px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: none;
+        }
+        
+        .btn-upload:hover {
+            background-color: #00a7e1;
+            transform: translateY(-2px);
+        }
+
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            .profile-title {
+                font-size: 1.8rem;
+            }
+            .info-item, .notice-card .notice-text, .netiquette-card ul li {
+                font-size: 1rem;
+            }
+            .notice-card .notice-title, .netiquette-card .netiquette-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-main">
+        
+       
+       <div class="profile-header">
+    <div class="profile-img-container">
+        <img src="upload/my-photo.jpg" class="profile-img" alt="صورة الطالب">
+    </div>
+    
+    <h1 class="profile-title">البيانات الشخصية</h1>
+    
+    <form id="uploadForm" method="post" action="upload_photo.php" enctype="multipart/form-data">
+        <input type="file" name="student_photo" id="photoInput" class="form-control mb-2" style="display: none;" required>
+        
+        <input type="hidden" name="student_code" value="2024104018">
+        
+        <button type="button" id="uploadButton" class="btn btn-upload">
+            <i class="fas fa-camera"></i> تغيير الصورة الشخصية
+        </button>
+    </form>
+</div>
+
+        <div class="card">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-item">
+                        <i class="fas fa-id-card"></i>
+                        <span class="info-label">كود الطالب:</span>
+                        <span>2024104018</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-user-circle"></i>
+                        <span class="info-label">الاسم:</span>
+                        <span>احمد هاني حسين حامد</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-building"></i>
+                        <span class="info-label">الفرقة:</span>
+                        <span>الثانية</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="info-label">الشعبة:</span>
+                        <span>نظم معلومات الاعمال</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <span class="info-label">مجموعة امتحان أون لاين:</span>
+                        <span>المجموعة الاولي</span>
+                    </div>
+                                        
+                    
+                                         <div class="info-item">
+                        <i class="fas fa-th-list"></i>
+                        <span class="info-label"> رقم الجلوس:</span>
+                        <span>262582</span>
+                           </div>
+                        <div class="info-item">
+                        <i class="fas fa-th-list"></i>
+                        <span class="info-label"> رقم اللجنة:</span>
+                        <span>24</span>
+                    </div>
+                    </div>
+                    
+                    
+                                        
+                    
+                    
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                          
+                
+                
+                
+                
+                
+                
+            </div>
+             </div>
+     <div class="netiquette-card">
+    <h3 class="netiquette-title"><i class="fas fa-handshake"></i> القواعد السلوكية والأخلاقية للتعلم الإلكتروني</h3>
+    <ul>
+        <li><i class="fas fa-check-circle"></i> الحفاظ على السرية: لا تشارك كود الطالب أو كلمة المرور الخاصة بك مع أي شخص، فهي مسؤوليتك الشخصية.</li>
+        <li><i class="fas fa-check-circle"></i> احترام حقوق الملكية: استخدم المحتوى التعليمي للمقررات للأغراض التعليمية فقط ولا تقم بنشره أو مشاركته خارج المنصة.</li>
+        <li><i class="fas fa-check-circle"></i> التفاعل الإيجابي: التزم بـ احترام أعضاء هيئة التدريس والزملاء في جميع وسائل التواصل (المنتديات، وغرف الدردشة).</li>
+        <li><i class="fas fa-check-circle"></i> النزاهة الأكاديمية: تجنب أي شكل من أشكال الغش أو الانتحال في الاختبارات والواجبات الإلكترونية.</li>
+        <li><i class="fas fa-check-circle"></i> المصداقية في البيانات: تأكد من أن جميع بياناتك الشخصية (الصورة، الاسم) محدثة وصحيحة.</li>
+    </ul>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('uploadButton').addEventListener('click', function() {
+            document.getElementById('photoInput').click();
+        });
+
+        document.getElementById('photoInput').addEventListener('change', function() {
+            document.getElementById('uploadForm').submit();
+        });
+    </script>
+</body>
+</html>
